@@ -1,0 +1,83 @@
+.header{
+    background-color: blue;
+    grid-area: header;
+}
+.nav{
+    background-color: aqua;
+    grid-area: nav;
+}
+.principal{
+    grid-area: principal;
+    display: grid;
+    grid-template-columns: 1fr, 1fr;
+    grid-template-rows: 1fr, 1fr;
+    gap: 0.3em;
+    grid-template-areas: 
+    "primeraCaja primeraCaja"
+    "segundaCaja terceraCaja";
+}
+.aside{
+    background-color: rgb(149, 146, 146);
+    grid-area: aside;
+}
+.footer{
+    background-color: black;
+    color: bisque;
+    grid-area: footer ;
+}
+.grid{
+    height:  100vh;
+    margin: 0;
+    display: grid;
+    grid-template-columns:1fr 5fr 1fr ;
+    grid-template-rows:1fr 18fr 1fr;
+    gap: 0.3em;
+    grid-template-areas: 
+    "header header header"
+    "nav principal aside"
+    "footer footer footer";
+    
+}
+@media screen and (max-width: 768px){
+    .grid{
+        height:  100vh;
+        margin: 0;
+        display: grid;
+        grid-template-columns: 100% ;
+        grid-template-rows:repeat(4, auto);
+        gap: 0.3em;
+        grid-template-areas: 
+        "header"
+        "principal"
+        "aside"
+        "footer";
+        
+    }
+.nav{
+    display: none;
+}
+
+.principal{
+    grid-area: principal;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr, 1fr, 1fr;
+    gap: 0.3em;
+    grid-template-areas: 
+    "primeraCaja"
+    "segundaCaja"
+    "terceraCaja";
+}
+}
+.caja1{
+background-color: burlywood;
+grid-area: primeraCaja;
+}
+.caja2{
+    background-color: burlywood;
+    grid-area: segundaCaja;
+    }
+.caja3{
+    background-color: burlywood;
+    grid-area: terceraCaja;
+    }
